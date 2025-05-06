@@ -46,16 +46,16 @@ app.listen(port, () => {
   console.log(`Server is running on post ${port}`);
 });
 
-<<<<<<< HEAD
+
     //production script
     app.use(express.static("./client/build"))
     app.get("*", (req,res)=>{
       res.sendFile(path.resolve(__dirname,"client","build","index.html"))
  })
-=======
+
  //production script
     app.use(express.static("./client/build"))
     app.get("*", (req,res)=>{
       res.sendFile(path.resolve(__dirname,"client","build","index.html"))
         })
->>>>>>> ca5e256ab0d54bd40dcb278329adeca2eccea3a0
+
