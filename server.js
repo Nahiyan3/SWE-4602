@@ -45,3 +45,9 @@ app.post("/create", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on post ${port}`);
 });
+
+    //production script
+    app.use(express.static("./client/build"))
+    app.get("*", (req,res)=>{
+      res.sendFile(path.resolve(__dirname,"client","build","index.html"))
+ })
